@@ -1,7 +1,11 @@
 # Importar las clases principales
-from .preprocessing import ImagePreprocessor
-from .read_features import FeatureExtractor
-from .segmentation import ImageSegmenter
+from .read_features import Image
+from .preprocessing import Preprocess
+from .segmentation import ColorSegmentation
+
+# Importar las constantes
+
+from .constans import RGB_LAB_MATRIX_D65,XYZ_D65_STANDAR_ILUMINATION,EPSILON
 
 # Definir metadatos del paquete
 __version__ = '1.0.0'
@@ -11,7 +15,10 @@ __description__ = 'Calsificación de Café'
 
 # Definir qué se exporta cuando se importa el paquete
 __all__ = [
-    "ImagePreprocessor",
-    "FeatureExtractor",
-    "ImageSegmenter",
+    'Image',
+    'Preprocess',
+    'ColorSegmentation',
+    'RGB_LAB_MATRIX_D65',
+    'XYZ_D65_STANDAR_ILUMINATION',
+    'EPSILON'
 ]
